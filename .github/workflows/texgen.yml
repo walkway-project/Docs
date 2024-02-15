@@ -18,7 +18,7 @@ jobs:
 
       - name: Commit Files
         run: |
-          rm docs.pdf
+          rm -f docs.pdf
           mv src.pdf dpcs.pdf
           ls
           git add dpcs.pdf
