@@ -18,10 +18,10 @@ jobs:
 
       - name: Commit Files
         run: |
-          rm Resume.pdf
-          mv src.pdf Resume.pdf
+          rm docs.pdf
+          mv src.pdf dpcs.pdf
           ls
-          git add Resume.pdf
+          git add dpcs.pdf
           git status
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
