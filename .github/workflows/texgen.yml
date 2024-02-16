@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ github.token }}
   
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
@@ -19,9 +21,9 @@ jobs:
       - name: Commit Files
         run: |
           rm -f docs.pdf
-          mv src.pdf dpcs.pdf
+          mv src.pdf docs.pdf
           ls
-          git add dpcs.pdf
+          git add docs.pdf
           git status
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
