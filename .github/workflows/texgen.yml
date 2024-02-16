@@ -22,12 +22,12 @@ jobs:
 
       - name: Commit Files
         run: |
-          rm -f docs.pdf
-          mv src.pdf docs.pdf
+          rm -f abstract.pdf
+          mv src.pdf abstract.pdf
           ls
-          git add docs.pdf
+          git add abstract.pdf
           git status
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "Updating Docs.pdf"
+          git commit -m "Updating Abstract."
           git push
